@@ -7,10 +7,10 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "mls",
       "schematics": {
         "@schematics/angular:component": {
-          "styleext": "stylus"
+          "styleext": "styl"
         }
       },
       "architect": {
@@ -27,7 +27,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.stylus"
+              "src/styles.styl"
             ],
             "scripts": []
           },

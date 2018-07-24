@@ -1,0 +1,132 @@
+.t
+  color #000000
+  font-size 1rem
+  font-weight 400
+  line-height 1.2
+  font-family Roboto
+
+//======== STYLES ============
+
+.t--center
+  text-align center
+
+.t--upper
+  text-transform uppercase
+
+.t--nowrap
+  white-space nowrap
+
+
+//======== WEIGHTS ============
+
+.t--light
+  font-weight 300
+
+.t--bold
+  font-weight 600
+
+//======== SIZES ============
+
+.t--bigger
+  font-size 1.125rem // 18px
+
+.t--big
+  font-size 1.375rem // 22px
+
+.t--xxl
+  font-size 3.75rem // 60px
+
+//======== COLORS ============
+
+.t--white
+  color white
+
+.t--blue
+  color #3bbde0
+
+.t--dark-gray
+  color #333333
+
+.t--red
+  color #f46565
+
+//======== OBJECTS ============
+
+.o-h1
+  @extends .t, .t--light, .t--dark-gray, .t--xxl
+
+.o-page-header
+  display flex
+  margin-bottom 20px
+  align-items center
+  justify-content space-between
+
+  @media (max-width: 36em)
+    flex-direction column
+    align-items flex-start
+
+.o-button
+  @extends .t, .t--white, .t--bold, .t--upper, .t--nowrap
+
+  width 100%
+  height 46px
+  line-height 46px
+  cursor pointer
+  border-radius 4px
+  background-color #06bfe4
+  border 1px solid transparent
+
+  &[disabled]
+    color #737373
+    cursor not-allowed
+    background-color #ebebeb
+
+.o-form-control
+  width 100%
+  background #fff
+  transition box-shadow .2s ease
+
+.o-form-control--input
+  height 42px
+  font-size 18px
+  padding 0 10px
+  border 1px solid #dfdfdf
+
+.o-form-control--input:active
+.o-form-control--input:focus
+  box-shadow 0 0 2px rgba(0, 0, 0, .1)
+
+//======== LAYOUTS ============
+
+.l-container
+  height 100%
+  width 1670px
+  max-width 90%
+  min-width 320px
+  margin 0 auto
+
+  &--md
+    width 64em
+
+  &--sm
+    width 48em
+
+  &--xs
+    width 36em
+
+  &--xxs
+    width 25em
+
+  &--main
+    padding 30px 0
+
+  &--full-page
+    width 100% !important
+    height 100vh !important
+    max-width none !important
+
+//======== COMPONENTS ============
+
+.c-box
+  border 1px solid #cccccc
+  background-color #ffffff

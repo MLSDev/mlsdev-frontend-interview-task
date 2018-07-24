@@ -1,0 +1,28 @@
+<form novalidate="novalidate" [formGroup]="form" (ngSubmit)="completePhoneVerification()">
+
+  <div class="c-auth-form__item">
+    <div class="t t--big t--bold t--center">We sent the code to your mobile number</div>
+  </div>
+
+  <div class="c-auth-form__item c-auth-form__item--small">
+    <div class="t t--bigger t--dark-gray t--center">{{phone}}</div>
+  </div>
+
+  <div class="c-auth-form__item t--center">
+    <a class="t t--blue t--bigger" uiSref="auth">Change phone number</a>
+  </div>
+
+  <div class="c-form-item c-auth-form__item c-auth-form__item--big">
+    <div class="c-form-item__label">Enter the code we sent you</div>
+    <input class="o-form-control o-form-control--input" type="text" formControlName="code" />
+  </div>
+
+  <div class="c-auth-form__item">
+    <button class="o-button c-auth-form__button" type="submit" [disabled]="form.invalid">CONFIRM</button>
+  </div>
+
+  <div class="t--center">
+    <a class="t t--blue t--bigger t--bold" (click)="resendPhoneVerificationCode()">Resend code</a>
+  </div>
+
+</form>

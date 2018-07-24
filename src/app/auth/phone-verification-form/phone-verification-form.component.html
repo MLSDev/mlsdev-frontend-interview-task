@@ -9,7 +9,7 @@
   </div>
 
   <div class="c-auth-form__item t--center">
-    <a class="t t--blue t--bigger" uiSref="auth">Change phone number</a>
+    <a class="t t--blue t--bigger" routerLink="/auth">Change phone number</a>
   </div>
 
   <div class="c-form-item c-auth-form__item c-auth-form__item--big">
@@ -19,10 +19,6 @@
 
   <div class="c-auth-form__item">
     <button class="o-button c-auth-form__button" type="submit" [disabled]="form.invalid">CONFIRM</button>
-  </div>
-
-  <div class="t--center">
-    <a class="t t--blue t--bigger t--bold" (click)="resendPhoneVerificationCode()">Resend code</a>
   </div>
 
 </form>

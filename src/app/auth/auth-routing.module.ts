@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AuthPageComponent } from './auth-page.component';
 import { LogInFormComponent } from './log-in-form/log-in-form.component';
-import { PhoneFormComponent } from './phone-form/phone-form.component';
 import { PhoneVerificationFormComponent } from './phone-verification-form/phone-verification-form.component';
 
 import { UnauthenticatedGuard } from '../core/guards/unauthenticated-guard.service';

@@ -30,20 +30,6 @@ export class LogInFormComponent {
       private notifications: NotificationsService,
   ) {}
 
-  public identifyViaFacebook(): void {
-    this
-      .session
-      .createViaFacebook()
-      .pipe(
-        tap(({ user }) => {
-          this.user.set(user);
-          this.router.navigate(['/auth']);
-        }),
-        catchError((error) => this.notifications.error(error))
-      )
-      .subscribe();
-  }
-
   public goToPhoneVerification(): void {
     const phone = this.form.get('phone').value;
 

@@ -1,9 +1,5 @@
 <form class="c-log-in-form" novalidate="novalidate" [formGroup]="form" (ngSubmit)="goToPhoneVerification()">
 
-  <mls-facebook-button class="c-auth-form__item" (click)="identifyViaFacebook()">Sign in with Facebook</mls-facebook-button>
-
-  <div class="c-log-in-form__divider c-auth-form__item"></div>
-
   <div class="c-form-item c-auth-form__item c-auth-form__item--big">
     <div class="c-form-item__label">Enter your Mobile number</div>
     <input class="o-form-control o-form-control--input" type="text" formControlName="phone" />

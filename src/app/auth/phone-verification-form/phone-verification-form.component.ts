@@ -30,7 +30,7 @@ export class PhoneVerificationFormComponent {
   ) {}
 
   public completePhoneVerification(): void {
-    return this
+    this
       .session
       .create({
         phone_number: this.phone,
@@ -41,16 +41,6 @@ export class PhoneVerificationFormComponent {
           this.user.set(response.user);
           this.router.navigate(['']);
         }),
-        catchError((error) => this.notifications.error(error)),
-      )
-      .subscribe();
-  }
-
-  public resendPhoneVerificationCode(): void {
-    this
-      .verification
-      .sendPhoneVerificationCode(this.phone)
-      .pipe(
         catchError((error) => this.notifications.error(error)),
       )
       .subscribe();

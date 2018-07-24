@@ -17,10 +17,6 @@ export class ApiService {
     return this.http.post<T>(`${API_HOST}/session`, credentials);
   }
 
-  public createFBSession<T>(credentials): Observable<T> {
-    return this.http.post<T>(`${API_HOST}/facebook/session`, credentials);
-  }
-
   public destroySession<T>(): Observable<T> {
     return this.http.delete<T>(`${API_HOST}/session`);
   }

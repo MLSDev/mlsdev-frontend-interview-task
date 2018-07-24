@@ -7,13 +7,11 @@ import { AuthModule } from './auth';
 import { CoreModule } from './core';
 import { AppRoutingModule } from './app-routing.module';
 import { BackendModule } from './backend/backend.module';
-import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
   ],
   imports: [
     CoreModule,

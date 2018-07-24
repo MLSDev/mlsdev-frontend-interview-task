@@ -13,7 +13,7 @@ export class VerificationService {
   public sendPhoneVerificationCode(phone: string): Observable<void> {
     return this
       .api
-      .sendPhoneVerificationCode({
+      .sendPhoneVerificationCode<void>({
         verification_code: { phone_number: phone }
       })
       .pipe(catchError((response) => throwError(response.error)));

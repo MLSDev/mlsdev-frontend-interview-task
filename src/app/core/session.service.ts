@@ -43,18 +43,6 @@ export class SessionService {
       );
   }
 
-  public createViaFacebook(): Observable<ISessionSource> {
-    return this
-      .getFacebookToken()
-      .pipe(
-        switchMap((facebook_token) => {
-          return this.api.createFBSession<ISessionSource>({ facebook_token });
-        }),
-        tap((response) => this.token.next(response.auth_token)),
-        catchError((response) => throwError(response.error)),
-      );
-  }
-
   public destroy(): Observable<void> {
     return this
       .api
@@ -66,15 +54,6 @@ export class SessionService {
 
   public clear(): void {
     this.token.next(null);
-  }
-
-  private getFacebookToken(): Observable<string> {
-    return Observable.create((observer) => {
-      FB.login(({ status, authResponse }) => {
-        status === 'connected' ? observer.next(authResponse.accessToken) : observer.error({ error: null });
-        observer.complete();
-      }, FACEBOOK_OPTIONS);
-    });
   }
 
   private getToken(): Token {
